@@ -471,7 +471,7 @@ body {
     -webkit-appearance: none;
     appearance: none;
     position: absolute;
-    outline: transparent;
+    /* outline: transparent; */
 }
 
 
@@ -885,6 +885,11 @@ body {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     color: #FFFFFF;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.email-input:focus {
+    border: 2px solid #FFFFFF;
 }
 
 .button-submit {
