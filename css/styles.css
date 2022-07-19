@@ -361,8 +361,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 6px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);   
 }
 
 .btn-close:hover .btn-icon,
@@ -434,9 +433,9 @@ body {
     fill: var(--brand-color);
 }
 
-
 .form-field .input {
     padding-left: 42px;
+    padding-right: 10px;
 }
 
 .comment {
@@ -461,6 +460,7 @@ body {
 }
 
 .agreement {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -472,8 +472,9 @@ body {
     appearance: none;
     position: absolute;
     outline: transparent;
+    top: 4px;
+    left: -4px;
 }
-
 
 .agreement-icon {
     margin-right: 9px;
@@ -481,7 +482,7 @@ body {
     height: 15px;
     border: 2px solid #212121;
     border-radius: 2px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .agreement-input:checked + .agreement-icon {
@@ -492,11 +493,16 @@ body {
     background-origin: border-box;
 }
 
+.agreement-input:focus + .agreement-icon {
+    outline: 2px solid #212121;
+}
+
 .agreement-text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     color: var(--paragraph-color);
+    user-select: none;
 }
 
 .agreement-text.link {
