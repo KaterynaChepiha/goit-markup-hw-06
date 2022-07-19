@@ -463,6 +463,8 @@ body {
 }
 
 .agreement-input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
     appearance: none;
     position: absolute;
 }
